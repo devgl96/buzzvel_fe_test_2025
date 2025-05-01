@@ -1,11 +1,17 @@
 import Card from "@/components/Card";
+import { LeftArrow } from "@/components/LeftArrow";
+import { RightArrow } from "@/components/RightArrow";
 import Image from "next/image";
 
 export default function Home() {
+  const paddingDefault = "px-16";
+
   return (
-    <div className="max-h-screen mx-16">
+    <div className="max-h-screen">
       {/* HEADER COMPONENT */}
-      <header className="h-24 w-full flex justify-between items-center top-6">
+      <header
+        className={`h-24 w-full flex justify-between items-center top-6 ${paddingDefault}`}
+      >
         <div>
           <ul className="flex items-center gap-12">
             <Image
@@ -31,7 +37,9 @@ export default function Home() {
       </header>
       <main>
         {/* HERO SECTION COMPONENT */}
-        <div className="flex justify-between items-center gap-[80px] mt-10">
+        <div
+          className={`flex justify-between items-center gap-[80px] mt-10 ${paddingDefault}`}
+        >
           <div className="flex flex-col gap-4 w-xl h-auto">
             <div className="relative inline-block">
               <Image
@@ -118,7 +126,9 @@ export default function Home() {
           </div>
         </div>
         {/* CONTENT SECTION */}
-        <div className="flex justify-between items-center gap-[80px] my-40">
+        <div
+          className={`flex justify-between items-center gap-[80px] my-40 ${paddingDefault}`}
+        >
           <div className="flex flex-1 flex-col gap-4">
             <div className="relative inline-block">
               <Image
@@ -226,6 +236,73 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+        {/* PEOPLE COMMENTS SECTION */}
+        <div
+          className={`flex flex-col items-center justify-center gap-10 bg-[#FACC15] h-[480px] max-w-full relative ${paddingDefault} my-3`}
+        >
+          <LeftArrow className="absolute top-[45%] bottom-0 left-14 fill-white" />
+          <div className="flex items-center justify-center gap-30 w-full px-14">
+            <div className="flex flex-col gap-4 flex-[100%]">
+              <p className="font-normal text-2xl leading-[160%] -tracking-tighter">
+                Id urna, nisl, ut quam. Diam suspendisse fringilla quam arcu
+                mattis est velit in. Nibh in purus sit convallis phasellus ut.
+                At vel erat ultricies commodo. Neque suspendisse a habitasse
+                commodo.
+              </p>
+              <p className="font-normal text-2xl leading-[160%] -tracking-tighter flex flex-col -gap-1">
+                Marie Poirot
+                <span className="font-bold text-2xl leading-[110%] tracking-tighter">
+                  Bigapp
+                </span>
+              </p>
+              <div className="flex items-center gap-2 mt-6">
+                <span className="w-8 h-2 rounded-full bg-[#0F172A]" />
+                <span className="w-2 h-2 rounded-full bg-white" />
+                <span className="w-2 h-2 rounded-full bg-white" />
+                <span className="w-2 h-2 rounded-full bg-white" />
+                <span className="w-2 h-2 rounded-full bg-white" />
+              </div>
+            </div>
+            <div className="relative inline-block mt-0 w-full">
+              <div className="relative flex-1 flex flex-col gap-10">
+                <Image
+                  src="/background-profile-image.svg"
+                  alt="background profile image vector"
+                  width={495}
+                  height={553}
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  className="z-0 absolute -top-[270px] right-32"
+                />
+                <Image
+                  src="/picture-profile-image.svg"
+                  alt="picture profile image vector"
+                  width={450}
+                  height={415}
+                  className="z-1 absolute -top-44 -left-12"
+                />
+                <Image
+                  src="/icons-square.svg"
+                  alt="icons square vector"
+                  width={125}
+                  height={245}
+                  className="z-2 absolute top-[95px] -left-6"
+                />
+                <Image
+                  src="/chat-quote.svg"
+                  alt="chat quote icon vector"
+                  width={42}
+                  height={42}
+                  className="z-3 absolute -top-[230px] right-[245px]"
+                />
+              </div>
+            </div>
+          </div>
+          <RightArrow className="absolute top-[45%] bottom-0 right-14 fill-[#0F172A] hover:fill-orange-600" />
         </div>
       </main>
       {/* <footer>
