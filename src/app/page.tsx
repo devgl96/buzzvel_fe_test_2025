@@ -304,6 +304,53 @@ export default function Home() {
           </div>
           <RightArrow className="absolute top-[45%] bottom-0 right-14 fill-[#0F172A] hover:fill-orange-600" />
         </div>
+        {/* INFORMATION SECTION */}
+        <div
+          className={`flex flex-col items-center justify-center gap-10 h-[600px] max-w-full relative ${paddingDefault} my-10`}
+        >
+          <div className="flex items-center justify-center gap-14 w-full px-14">
+            <div className="relative w-full">
+              <Image
+                src="/meet-students-image-section.svg"
+                alt="meet students image section vector"
+                width={495}
+                height={553}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </div>
+            <div className="flex flex-col gap-4 flex-[100%] ">
+              <h2 className="font-extrabold text-[56px] leading-[110%] tracking-tighter relative inline-block">
+                <Image
+                  src="/plane-departure.svg"
+                  alt="plane departure icon vector"
+                  width={62}
+                  height={62}
+                  className="z-0 absolute -top-10 right-[210px]"
+                />
+                Meet international students & teachers
+              </h2>
+              <p className="font-normal text-lg leading-[180%] -tracking-tighter mt-6 text-gray-900">
+                Morbi sit egestas dignissim pharetra, sed amet. Tempus justo
+                senectus risus ac vel, velit, nunc. Eget commodo eget in aliquam
+                facilisi facilisi nec magna hendrerit. Placerat ipsum sit tellus
+                urna, faucibus aenean lorem faucibus integer.
+              </p>
+              <button className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90">
+                Explore teachers and students
+                <Image
+                  src="/arrow-right.svg"
+                  alt="arrow right blue icon"
+                  width={14}
+                  height={14}
+                />
+              </button>
+            </div>
+          </div>
+        </div>
       </main>
       {/* <footer>
         <h2>Footer</h2>
