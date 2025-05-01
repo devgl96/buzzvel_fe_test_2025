@@ -4,6 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="max-h-screen mx-16">
+      {/* HEADER COMPONENT */}
       <header className="h-24 w-full flex justify-between items-center top-6">
         <div>
           <ul className="flex items-center gap-12">
@@ -29,11 +30,12 @@ export default function Home() {
         </div>
       </header>
       <main>
+        {/* HERO SECTION COMPONENT */}
         <div className="flex justify-between items-center gap-[80px] mt-10">
           <div className="flex flex-col gap-4 w-xl h-auto">
             <div className="relative inline-block">
               <Image
-                src="/vector_title.png"
+                src="/vector_title.svg"
                 alt="underline vector title"
                 width={195}
                 height={195}
@@ -113,6 +115,138 @@ export default function Home() {
                 height: "auto",
               }}
             />
+          </div>
+        </div>
+        {/* CONTENT SECTION */}
+        <div className="flex justify-between items-center gap-[80px] my-40">
+          <div className="flex flex-1 flex-col gap-4">
+            <div className="relative inline-block">
+              <Image
+                src="/vector_title.svg"
+                alt="underline vector title"
+                width={245}
+                height={215}
+                className="z-0 absolute top-11 left-20"
+              />
+              <h2 className="font-extrabold text-[56px] z-10 leading-[110%] -tracking-normal relative">
+                An all-in-one app that makes it easier
+              </h2>
+            </div>
+            <ul className="mt-8">
+              <li className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9">
+                <Image
+                  src="/check.svg"
+                  alt="check icon"
+                  width={23}
+                  height={23}
+                />
+                Est et in pharetra magna adipiscing ornare aliquam.
+              </li>
+              <li className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9">
+                <Image
+                  src="/check.svg"
+                  alt="check icon"
+                  width={23}
+                  height={23}
+                />
+                Tellus arcu sed consequat ac velit ut eu blandit.
+              </li>
+              <li className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9">
+                <Image
+                  src="/check.svg"
+                  alt="check icon"
+                  width={23}
+                  height={23}
+                />
+                Ullamcorper ornare in et egestas dolor orci.
+              </li>
+            </ul>
+            <button className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90">
+              Find more about the app
+              <Image
+                src="/arrow-right.svg"
+                alt="arrow right blue icon"
+                width={14}
+                height={14}
+              />
+            </button>
+          </div>
+          <div className="flex flex-1 flex-col relative">
+            <div className="relative inline-block mt-0">
+              <Image
+                src="/blob.svg"
+                alt="blob vector"
+                width={500}
+                height={500}
+                // sizes="100vw"
+                // style={{
+                //   width: "100%",
+                //   height: "auto",
+                // }}
+                className="z-0 absolute top-[-200px] right-70"
+              />
+              <Image
+                src="/icons-content.svg"
+                alt="icons content vector"
+                width={125}
+                height={245}
+                className="z-1 absolute top-[-250px] -left-30"
+              />
+              <Image
+                src="/desktop.svg"
+                alt="desktop vector"
+                width={620}
+                height={450}
+                className="z-2 absolute top-[-235px] -left-2"
+              />
+            </div>
+            <div className="relative inline-block mt-0 z-4">
+              <div className="w-52 h-56 bg-white rounded-lg absolute top-16 -left-6 p-4 flex flex-col gap-2 shadow-lg">
+                <span className="text-purple-800 font-normal text-sm bg-purple-100 rounded-sm px-1 py-2 flex items-center justify-center w-[71px] h-6">
+                  Featured
+                </span>
+                <h3 className="font-medium text-xl leading-[110%] -tracking-tighter">
+                  The map of mathematics
+                </h3>
+                <p className="font-normal text-sm leading-[140%] -tracking-tighter text-gray-600">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+                <button className="flex items-center justify-center px-2 py-3 my-1 rounded-lg cursor-pointer h-10 w-full border-2 border-blue-600 text-blue-600 font-medium text-sm hover:opacity-90">
+                  Take Lesson
+                </button>
+              </div>
+              <div className="w-52 h-56 bg-white rounded-lg absolute top-16 left-52 p-4 flex flex-col gap-2 shadow-lg">
+                <span className="text-purple-800 font-normal text-sm bg-purple-100 rounded-sm px-1 py-2 flex items-center justify-center w-[71px] h-6">
+                  Featured
+                </span>
+                <h3 className="font-medium text-xl leading-[110%] -tracking-tighter">
+                  The map of mathematics
+                </h3>
+                <p className="font-normal text-sm leading-[140%] -tracking-tighter text-gray-600">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+                <button className="flex items-center justify-center px-2 py-3 my-1 rounded-lg cursor-pointer h-10 w-full border-2 border-blue-600 text-blue-600 font-medium text-sm hover:opacity-90">
+                  Take Lesson
+                </button>
+              </div>
+              <div className="w-52 h-56 bg-white rounded-lg absolute top-16 right-2 p-4 flex flex-col gap-2 shadow-lg">
+                <span className="text-purple-800 font-normal text-sm bg-purple-100 rounded-sm px-1 py-2 flex items-center justify-center w-[71px] h-6">
+                  Featured
+                </span>
+                <h3 className="font-medium text-xl leading-[110%] -tracking-tighter">
+                  The map of mathematics
+                </h3>
+                <p className="font-normal text-sm leading-[140%] -tracking-tighter text-gray-600">
+                  Egestas elit dui scelerisque ut eu purus aliquam vitae
+                  habitasse.
+                </p>
+                <button className="flex items-center justify-center px-2 py-3 my-1 rounded-lg cursor-pointer h-10 w-full border-2 border-blue-600 text-blue-600 font-medium text-sm hover:opacity-90">
+                  Take Lesson
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </main>
