@@ -1,4 +1,4 @@
-import { CirclePlay } from "lucide-react";
+import Card from "@/components/Card";
 import Image from "next/image";
 
 export default function Home() {
@@ -201,51 +201,29 @@ export default function Home() {
               />
             </div>
             <div className="relative inline-block mt-0 z-4">
-              <div className="w-52 h-56 bg-white rounded-lg absolute top-16 -left-6 p-4 flex flex-col gap-2 shadow-lg">
-                <span className="text-purple-800 font-normal text-sm bg-purple-100 rounded-sm px-1 py-2 flex items-center justify-center w-[71px] h-6">
-                  Featured
-                </span>
-                <h3 className="font-medium text-xl leading-[110%] -tracking-tighter">
-                  The map of mathematics
-                </h3>
-                <p className="font-normal text-sm leading-[140%] -tracking-tighter text-gray-600">
-                  Egestas elit dui scelerisque ut eu purus aliquam vitae
-                  habitasse.
-                </p>
-                <button className="flex items-center justify-center px-2 py-3 my-1 rounded-lg cursor-pointer h-10 w-full border-2 border-blue-600 text-blue-600 font-medium text-sm hover:opacity-90">
-                  Take Lesson
-                </button>
-              </div>
-              <div className="w-52 h-56 bg-white rounded-lg absolute top-16 left-52 p-4 flex flex-col gap-2 shadow-lg">
-                <span className="text-purple-800 font-normal text-sm bg-purple-100 rounded-sm px-1 py-2 flex items-center justify-center w-[71px] h-6">
-                  Featured
-                </span>
-                <h3 className="font-medium text-xl leading-[110%] -tracking-tighter">
-                  The map of mathematics
-                </h3>
-                <p className="font-normal text-sm leading-[140%] -tracking-tighter text-gray-600">
-                  Egestas elit dui scelerisque ut eu purus aliquam vitae
-                  habitasse.
-                </p>
-                <button className="flex items-center justify-center px-2 py-3 my-1 rounded-lg cursor-pointer h-10 w-full border-2 border-blue-600 text-blue-600 font-medium text-sm hover:opacity-90">
-                  Take Lesson
-                </button>
-              </div>
-              <div className="w-52 h-56 bg-white rounded-lg absolute top-16 right-2 p-4 flex flex-col gap-2 shadow-lg">
-                <span className="text-purple-800 font-normal text-sm bg-purple-100 rounded-sm px-1 py-2 flex items-center justify-center w-[71px] h-6">
-                  Featured
-                </span>
-                <h3 className="font-medium text-xl leading-[110%] -tracking-tighter">
-                  The map of mathematics
-                </h3>
-                <p className="font-normal text-sm leading-[140%] -tracking-tighter text-gray-600">
-                  Egestas elit dui scelerisque ut eu purus aliquam vitae
-                  habitasse.
-                </p>
-                <button className="flex items-center justify-center px-2 py-3 my-1 rounded-lg cursor-pointer h-10 w-full border-2 border-blue-600 text-blue-600 font-medium text-sm hover:opacity-90">
-                  Take Lesson
-                </button>
-              </div>
+              <Card
+                badge="Featured"
+                title="The map of mathematics"
+                description="Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse."
+                badgeColor="purple"
+                position="top-16 -left-6"
+              />
+
+              <Card
+                badge="Popular"
+                title="Design for how people think"
+                description="Aliquam ut euismod condimentum elementum ultricies volutpat sit non."
+                badgeColor="blue"
+                position="top-16 left-52"
+              />
+
+              <Card
+                badge="New"
+                title="International & commercial law"
+                description="Molestie integer eu arcu, mauris bibendum rhoncus imperdiet dui."
+                badgeColor="green"
+                position="top-16 right-2"
+              />
             </div>
           </div>
         </div>
