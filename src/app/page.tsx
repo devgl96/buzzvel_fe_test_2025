@@ -351,6 +351,59 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* STATISTICS SECTION */}
+        <div
+          className={`
+          flex flex-col items-center justify-center gap-10 h-[373px] max-w-full relative ${paddingDefault} my-10 bg-gray-900`}
+        >
+          <div className="flex items-center justify-between gap-14 w-full px-14">
+            <div className="flex flex-col items-center justify-center gap-2 text-[#FACC15]">
+              <Image
+                src="/heart_icon.svg"
+                alt="heart icon vector"
+                width={60}
+                height={60}
+              />
+
+              <h1 className="font-extrabold text-7xl leading-[110%] tracking-tighter relative inline-block">
+                195
+              </h1>
+              <p className="font-normal text-2xl leading-[160%] -tracking-tighter">
+                user countries
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2 text-[#FACC15]">
+              <Image
+                src="/diamond_icon.svg"
+                alt="diamond icon vector"
+                width={60}
+                height={60}
+              />
+
+              <h1 className="font-extrabold text-7xl leading-[110%] tracking-tighter relative inline-block">
+                1M
+              </h1>
+              <p className="font-normal text-2xl leading-[160%] -tracking-tighter">
+                valued teachers
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2 text-[#FACC15]">
+              <Image
+                src="/teacher_icon.svg"
+                alt="teacher icon vector"
+                width={60}
+                height={60}
+              />
+
+              <h1 className="font-extrabold text-7xl leading-[110%] tracking-tighter relative inline-block">
+                17M
+              </h1>
+              <p className="font-normal text-2xl leading-[160%] -tracking-tighter">
+                happy students
+              </p>
+            </div>
+          </div>
+        </div>
       </main>
       {/* <footer>
         <h2>Footer</h2>
