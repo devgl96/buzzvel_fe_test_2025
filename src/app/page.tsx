@@ -356,7 +356,7 @@ export default function Home() {
           className={`
           flex flex-col items-center justify-center gap-10 h-[373px] max-w-full relative ${paddingDefault} my-10 bg-gray-900`}
         >
-          <div className="flex items-center justify-between gap-14 w-full px-14">
+          <div className="flex items-center justify-around gap-24 w-full px-14">
             <div className="flex flex-col items-center justify-center gap-2 text-[#FACC15]">
               <Image
                 src="/heart_icon.svg"
