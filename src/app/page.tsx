@@ -411,6 +411,90 @@ export default function Home() {
         >
           <TestimonialSlider />
         </div>
+        {/* FEATURES SECTION */}
+        <div
+          className={`flex justify-between items-center gap-[80px] my-40 ${paddingDefault}`}
+        >
+          <div className="flex flex-1 flex-col gap-4">
+            <div className="relative inline-block">
+              <Image
+                src="/vector_title.svg"
+                alt="underline vector title"
+                width={205}
+                height={215}
+                className="z-0 absolute top-11 right-[152px ]"
+              />
+              <h2 className="font-extrabold text-[56px] z-10 leading-[110%] -tracking-normal relative">
+                All the cool features
+              </h2>
+            </div>
+            <div className="my-12">
+              <p className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9">
+                Mauris consequat, cursus pharetra et, habitasse rhoncus quis
+                odio ac. In et dolor eu donec maecenas nulla. Cum sed orci, sit
+                pellentesque quisque feugiat cras ullamcorper. Ultrices in amet,
+                ullamcorper non viverra a, neque orci.
+              </p>
+            </div>
+            <button className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90">
+              View all the features
+              <Image
+                src="/arrow-right.svg"
+                alt="arrow right blue icon"
+                width={14}
+                height={14}
+              />
+            </button>
+          </div>
+          <div className="flex flex-1 flex-col relative -right-16">
+            <div className="relative inline-block mt-0">
+              <Image
+                src="/blob.svg"
+                alt="blob vector"
+                width={500}
+                height={500}
+                className="z-0 absolute top-[-240px] right-[270px]"
+              />
+              <Image
+                src="/icons-stars-circles.svg"
+                alt="icons stars circles vector"
+                width={265}
+                height={245}
+                className="z-1 absolute -top-72 left-20"
+              />
+              <Image
+                src="/Picture.svg"
+                alt="picture vector"
+                width={320}
+                height={350}
+                className="z-2 absolute top-10 -left-28"
+              />
+              <Image
+                src="/Picture-1.svg"
+                alt="picture 1 vector"
+                width={255}
+                height={300}
+                className="z-2 absolute top-10 right-52"
+              />
+              <Image
+                src="/Picture-2.svg"
+                alt="picture 2 vector"
+                width={255}
+                height={300}
+                className="z-2 absolute -top-40 left-30"
+              />
+            </div>
+            <div className="relative inline-block mt-0 z-4">
+              <Card
+                badge="Popular"
+                title="Design for how people think"
+                description="Aliquam ut euismod condimentum elementum ultricies volutpat sit non."
+                badgeColor="blue"
+                position="-top-50 -left-20"
+              />
+            </div>
+          </div>
+        </div>
       </main>
       {/* <footer>
         <h2>Footer</h2>
