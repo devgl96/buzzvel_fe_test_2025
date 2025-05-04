@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Card from "@/components/Card";
 import { LeftArrow } from "@/components/LeftArrow";
 import { RightArrow } from "@/components/RightArrow";
-import Image from "next/image";
+import TestimonialSlider from "@/components/TestimonialSlider";
 
 export default function Home() {
   const paddingDefault = "px-16";
@@ -403,6 +404,12 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+        {/* TESTIMONIAL SECTION */}
+        <div
+          className={`flex flex-col items-center justify-center gap-10 h-[600px] max-w-full relative ${paddingDefault} my-3`}
+        >
+          <TestimonialSlider />
         </div>
       </main>
       {/* <footer>
