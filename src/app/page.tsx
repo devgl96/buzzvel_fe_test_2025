@@ -497,7 +497,7 @@ export default function Home() {
         </div>
         {/* SIGN UP SECTION */}
         <div
-          className={`flex items-center justify-center gap-20 h-[779px] max-w-full relative ${paddingDefault} my-3 bg-yellow-400 px-20 py-64`}
+          className={`flex items-center justify-center gap-20 h-[779px] max-w-full relative ${paddingDefault}bg-yellow-400 px-20 py-64`}
         >
           <Image
             src="/left-card-round.svg"
@@ -528,6 +528,39 @@ export default function Home() {
             height={430}
             className="absolute top-24 right-0"
           />
+        </div>
+        {/* FORM SECTION */}
+        <div className="flex items-center justify-center h-[779px] max-w-full relative bg-[#EA580C] p-20 gap-20 text-white">
+          <div className="flex flex-col items-center justify-center gap-8 w-7xl">
+            <h2 className="font-extrabold text-[56px] leading-[110%] -tracking-normal relative">
+              Ready for your next project?
+            </h2>
+            <p className="text-[32px] font-extralight leading-[160%] -tracking-tighter h-20">
+              Sit elit feugiat turpis sed integer integer accumsan turpis.
+            </p>
+            <form className="flex flex-col gap-5 w-[550px]">
+              <label className="font-medium text-lg leading-[100%]">
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full h-12 rounded-xl bg-white placeholder:text-[#A6A6A6] p-4 placeholder:text-sm placeholder:font-normal"
+              />
+              <label className="font-medium text-lg leading-[100%]">
+                Message
+              </label>
+              <textarea
+                placeholder="What are you say?"
+                className="w-full h-20 rounded-xl bg-white placeholder:text-[#A6A6A6] p-4 placeholder:text-sm placeholder:font-normal"
+              />
+              <div className="w-full flex items-center justify-center mt-3">
+                <button className="text-center mx-0 border-2 border-[#0F172A] rounded-lg cursor-pointer w-60 h-12 px-6 bg-[#0F172A] text-white font-bold text-2xl hover:opacity-90">
+                  Request Demo
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </main>
       {/* <footer>
