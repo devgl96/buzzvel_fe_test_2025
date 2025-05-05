@@ -495,6 +495,40 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* SIGN UP SECTION */}
+        <div
+          className={`flex items-center justify-center gap-20 h-[779px] max-w-full relative ${paddingDefault} my-3 bg-yellow-400 px-20 py-64`}
+        >
+          <Image
+            src="/left-card-round.svg"
+            alt="left card round vector"
+            width={430}
+            height={430}
+            className="absolute top-24 left-0"
+          />
+
+          <div className="flex flex-col items-center justify-center gap-8 w-7xl">
+            <h2 className="font-extrabold text-[56px] leading-[110%] -tracking-normal relative">
+              Join a world of learning
+            </h2>
+            <div className="flex flex-col items-center justify-center gap-8">
+              <p className="text-xl font-normal leading-[180%] -tracking-tighter h-20 text-gray-900 text-center w-2xl">
+                Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
+                Risus elit et fringilla habitant ut facilisi.
+              </p>
+              <button className="border-2 border-orange-600 rounded-lg cursor-pointer w-60 h-12 px-6 bg-orange-600 text-white font-bold text-2xl hover:opacity-90">
+                Sign Up Now
+              </button>
+            </div>
+          </div>
+          <Image
+            src="/right-card-round.svg"
+            alt="right card round vector"
+            width={430}
+            height={430}
+            className="absolute top-24 right-0"
+          />
+        </div>
       </main>
       {/* <footer>
         <h2>Footer</h2>
