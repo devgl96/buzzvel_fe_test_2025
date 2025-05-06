@@ -3,6 +3,10 @@ import Card from "@/components/Card";
 import { LeftArrow } from "@/components/LeftArrow";
 import { RightArrow } from "@/components/RightArrow";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import { RightFullArrow } from "@/components/RightFullArrow";
+import { WorldIcon } from "@/components/WorldIcon";
+import { EuroSymbol } from "@/components/EuroSymbol";
+import { AccessibilitySymbol } from "@/components/AccessibilitySymbol";
 
 export default function Home() {
   const paddingDefault = "px-16";
@@ -563,9 +567,118 @@ export default function Home() {
           </div>
         </div>
       </main>
-      {/* <footer>
-        <h2>Footer</h2>
-      </footer> */}
+      {/* FOOTER SECTION */}
+      {/* <footer className="flex flex-col bg-gray-900"> */}
+      <footer
+        className={`flex flex-col items-center justify-center gap-20 max-w-full relative ${paddingDefault} bg-gray-900 pt-12`}
+      >
+        <div className="flex items-start justify-between w-full gap-10 text-white">
+          <Image
+            src="footer-logo.svg"
+            alt="footer logo"
+            width={160}
+            height={40}
+          />
+          <div className="flex flex-col gap-10">
+            <p className="font-medium text-sm leading-[110%]">Product</p>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Pricing
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Overview
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Browse
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Accessibility
+            </a>
+          </div>
+          <div className="flex flex-col gap-10">
+            <p className="font-medium text-sm leading-[110%]">Solutions</p>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Brainstorming
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Ideation
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Wireframing
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Research
+            </a>
+          </div>
+          <div className="flex flex-col gap-10">
+            <p className="font-medium text-sm leading-[110%]">Resources</p>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Help Center
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Blog
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Tutorials
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              FAQs
+            </a>
+          </div>
+          <div className="flex flex-col gap-10">
+            <p className="font-medium text-sm leading-[110%]">Support</p>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Contact Us
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Developers
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Documentation
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Integrations
+            </a>
+          </div>
+          <div className="flex flex-col gap-10">
+            <p className="font-medium text-sm leading-[110%]">Company</p>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              About
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Press
+            </a>
+            <a href="#" className="font-normal text-sm leading-[140%]">
+              Events
+            </a>
+            <a
+              href="#"
+              className="font-normal text-sm leading-[140%] flex items-center gap-2"
+            >
+              Request Demo <RightFullArrow className="fill-white" />
+            </a>
+          </div>
+        </div>
+        <div className="flex items-center justify-between w-full border-t-2 border-gray-700 text-white">
+          <div className="flex items-center justify-center text-[16px] leading-[140%] font-normal">
+            uteach@2025. All rights reserved.
+          </div>
+          <div className="flex items-center justify-center gap-10 py-10">
+            <p className="font-normal text-[16px] leading-[140%]">Terms</p>
+            <p className="font-normal text-[16px] leading-[140%]">Privacy</p>
+            <p className="font-normal text-[16px] leading-[140%]">Contact</p>
+            <p className="font-normal text-[16px] leading-[140%] flex items-center justify-center gap-3">
+              <WorldIcon className="fill-white" /> EN
+            </p>
+            <p className="font-normal text-[16px] leading-[140%] flex items-center justify-center gap-3">
+              <EuroSymbol />
+              EUR
+            </p>
+            <p className="font-normal text-[16px] leading-[140%]">
+              <AccessibilitySymbol />
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
