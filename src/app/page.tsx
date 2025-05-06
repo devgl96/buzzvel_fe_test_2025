@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Card from "@/components/Card";
 import { LeftArrow } from "@/components/LeftArrow";
@@ -7,15 +8,62 @@ import { RightFullArrow } from "@/components/RightFullArrow";
 import { WorldIcon } from "@/components/WorldIcon";
 import { EuroSymbol } from "@/components/EuroSymbol";
 import { AccessibilitySymbol } from "@/components/AccessibilitySymbol";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const paddingDefault = "px-16";
 
+  const headerVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const buttonVariants = {
+    hover: {
+      scale: 1.1,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: 0.2 },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100, duration: 1.3 },
+    },
+  };
+
+  const contentVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.3, delayChildren: 0.2 },
+    },
+  };
+
+  const listItemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+  };
+
   return (
     <div className="max-h-screen">
       {/* HEADER COMPONENT */}
-      <header
+      <motion.header
         className={`h-24 w-full flex justify-between items-center top-6 ${paddingDefault}`}
+        variants={headerVariants}
+        initial="hidden"
+        animate="visible"
       >
         <div>
           <ul className="flex items-center gap-12">
@@ -32,18 +80,29 @@ export default function Home() {
           </ul>
         </div>
         <div className="flex items-center gap-4">
-          <button className="border-none cursor-pointer font-medium">
+          <motion.button
+            className="border-none cursor-pointer font-medium"
+            variants={buttonVariants}
+            whileHover="hover"
+          >
             Log In
-          </button>
-          <button className="border-2 p-3 border-slate-700 rounded-lg cursor-pointer font-medium w-[153px] h-12">
+          </motion.button>
+          <motion.button
+            className="border-2 p-3 border-slate-700 rounded-lg cursor-pointer font-medium w-[153px] h-12"
+            variants={buttonVariants}
+            whileHover="hover"
+          >
             Sign Up Now
-          </button>
+          </motion.button>
         </div>
-      </header>
+      </motion.header>
       <main>
         {/* HERO SECTION COMPONENT */}
-        <div
+        <motion.div
           className={`flex justify-between items-center gap-[80px] mt-10 ${paddingDefault}`}
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 100 }}
         >
           <div className="flex flex-col gap-4 w-xl h-auto">
             <div className="relative inline-block">
@@ -64,10 +123,18 @@ export default function Home() {
               pellentesque turpis ultricies.
             </p>
             <div className="flex gap-8 items-center">
-              <button className="border-2 border-orange-600 rounded-lg cursor-pointer w-60 h-12 px-6 bg-orange-600 text-white font-bold text-2xl hover:opacity-90">
+              <motion.button
+                className="border-2 border-orange-600 rounded-lg cursor-pointer w-60 h-12 px-6 bg-orange-600 text-white font-bold text-2xl hover:opacity-90"
+                variants={buttonVariants}
+                whileHover="hover"
+              >
                 Sign Up Now
-              </button>
-              <button className="flex items-center justify-center gap-3 p-3 rounded-lg cursor-pointer h-16 px-6 py-5 text-blue-600 font-medium text-lg hover:opacity-90">
+              </motion.button>
+              <motion.button
+                className="flex items-center justify-center gap-3 p-3 rounded-lg cursor-pointer h-16 px-6 py-5 text-blue-600 font-medium text-lg hover:opacity-90"
+                variants={buttonVariants}
+                whileHover="hover"
+              >
                 <Image
                   src="/play-circle.svg"
                   alt="play circle icon"
@@ -75,14 +142,19 @@ export default function Home() {
                   height={20}
                 />{" "}
                 View Demo
-              </button>
+              </motion.button>
             </div>
             <div className="flex gap-12 w-xl mt-20">
               <p className="text-base font-normal w-52 h-11 text-gray-600 leading-[140%] tracking-normal">
                 Trusted by
                 <br /> leading companies
               </p>
-              <div className="flex gap-7 justify-evenly items-center w-full">
+              <motion.div
+                className="flex gap-7 justify-evenly items-center w-full"
+                variants={imageVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <Image
                   src="/company_logo_1.svg"
                   alt="company 1"
@@ -113,10 +185,15 @@ export default function Home() {
                   width={30}
                   height={30}
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
-          <div className="flex flex-1">
+          <motion.div
+            className="flex flex-1"
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <Image
               src="/hero-image-section.svg"
               alt="hero image section"
@@ -128,11 +205,15 @@ export default function Home() {
                 height: "auto",
               }}
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         {/* CONTENT SECTION */}
-        <div
+        <motion.div
           className={`flex justify-between items-center gap-[80px] my-40 ${paddingDefault}`}
+          variants={contentVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <div className="flex flex-1 flex-col gap-4">
             <div className="relative inline-block">
@@ -148,7 +229,10 @@ export default function Home() {
               </h2>
             </div>
             <ul className="mt-8">
-              <li className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9">
+              <motion.li
+                className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9"
+                variants={listItemVariants}
+              >
                 <Image
                   src="/check.svg"
                   alt="check icon"
@@ -156,8 +240,11 @@ export default function Home() {
                   height={23}
                 />
                 Est et in pharetra magna adipiscing ornare aliquam.
-              </li>
-              <li className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9">
+              </motion.li>
+              <motion.li
+                className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9"
+                variants={listItemVariants}
+              >
                 <Image
                   src="/check.svg"
                   alt="check icon"
@@ -165,8 +252,11 @@ export default function Home() {
                   height={23}
                 />
                 Tellus arcu sed consequat ac velit ut eu blandit.
-              </li>
-              <li className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9">
+              </motion.li>
+              <motion.li
+                className="text-xl font-normal flex items-center gap-2 leading-[180%] -tracking-tighter h-9"
+                variants={listItemVariants}
+              >
                 <Image
                   src="/check.svg"
                   alt="check icon"
@@ -174,9 +264,13 @@ export default function Home() {
                   height={23}
                 />
                 Ullamcorper ornare in et egestas dolor orci.
-              </li>
+              </motion.li>
             </ul>
-            <button className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90">
+            <motion.button
+              className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90"
+              variants={buttonVariants}
+              whileHover="hover"
+            >
               Find more about the app
               <Image
                 src="/arrow-right.svg"
@@ -184,7 +278,7 @@ export default function Home() {
                 width={14}
                 height={14}
               />
-            </button>
+            </motion.button>
           </div>
           <div className="flex flex-1 flex-col relative">
             <div className="relative inline-block mt-0">
@@ -193,11 +287,6 @@ export default function Home() {
                 alt="blob vector"
                 width={500}
                 height={500}
-                // sizes="100vw"
-                // style={{
-                //   width: "100%",
-                //   height: "auto",
-                // }}
                 className="z-0 absolute top-[-200px] right-70"
               />
               <Image
@@ -216,35 +305,44 @@ export default function Home() {
               />
             </div>
             <div className="relative inline-block mt-0 z-4">
-              <Card
-                badge="Featured"
-                title="The map of mathematics"
-                description="Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse."
-                badgeColor="purple"
-                position="top-16 -left-6"
-              />
+              <motion.div variants={cardVariants}>
+                <Card
+                  badge="Featured"
+                  title="The map of mathematics"
+                  description="Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse."
+                  badgeColor="purple"
+                  position="top-16 -left-6"
+                />
+              </motion.div>
 
-              <Card
-                badge="Popular"
-                title="Design for how people think"
-                description="Aliquam ut euismod condimentum elementum ultricies volutpat sit non."
-                badgeColor="blue"
-                position="top-16 left-52"
-              />
+              <motion.div variants={cardVariants}>
+                <Card
+                  badge="Popular"
+                  title="Design for how people think"
+                  description="Aliquam ut euismod condimentum elementum ultricies volutpat sit non."
+                  badgeColor="blue"
+                  position="top-16 left-52"
+                />
+              </motion.div>
 
-              <Card
-                badge="New"
-                title="International & commercial law"
-                description="Molestie integer eu arcu, mauris bibendum rhoncus imperdiet dui."
-                badgeColor="green"
-                position="top-16 right-2"
-              />
+              <motion.div variants={cardVariants}>
+                <Card
+                  badge="New"
+                  title="International & commercial law"
+                  description="Molestie integer eu arcu, mauris bibendum rhoncus imperdiet dui."
+                  badgeColor="green"
+                  position="top-16 right-2"
+                />
+              </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* PEOPLE COMMENTS SECTION */}
-        <div
+        <motion.div
           className={`flex flex-col items-center justify-center gap-10 bg-[#FACC15] h-[480px] max-w-full relative ${paddingDefault} my-3`}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
+          viewport={{ once: true }}
         >
           <LeftArrow className="absolute top-[45%] bottom-0 left-14 fill-white" />
           <div className="flex items-center justify-center gap-30 w-full px-14">
@@ -308,10 +406,13 @@ export default function Home() {
             </div>
           </div>
           <RightArrow className="absolute top-[45%] bottom-0 right-14 fill-[#0F172A] hover:fill-orange-600" />
-        </div>
+        </motion.div>
         {/* INFORMATION SECTION */}
-        <div
+        <motion.div
           className={`flex flex-col items-center justify-center gap-10 h-[600px] max-w-full relative ${paddingDefault} my-10`}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
+          viewport={{ once: true }}
         >
           <div className="flex items-center justify-center gap-14 w-full px-14">
             <div className="relative w-full">
@@ -344,7 +445,11 @@ export default function Home() {
                 facilisi facilisi nec magna hendrerit. Placerat ipsum sit tellus
                 urna, faucibus aenean lorem faucibus integer.
               </p>
-              <button className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90">
+              <motion.button
+                className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90"
+                variants={buttonVariants}
+                whileHover="hover"
+              >
                 Explore teachers and students
                 <Image
                   src="/arrow-right.svg"
@@ -352,14 +457,17 @@ export default function Home() {
                   width={14}
                   height={14}
                 />
-              </button>
+              </motion.button>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* STATISTICS SECTION */}
-        <div
+        <motion.div
           className={`
           flex flex-col items-center justify-center gap-10 h-[373px] max-w-full relative ${paddingDefault} my-10 bg-gray-900`}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
+          viewport={{ once: true }}
         >
           <div className="flex items-center justify-around gap-24 w-full px-14">
             <div className="flex flex-col items-center justify-center gap-2 text-[#FACC15]">
@@ -408,16 +516,23 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* TESTIMONIAL SECTION */}
-        <div
+        <motion.div
           className={`flex flex-col items-center justify-center gap-10 h-[600px] max-w-full relative ${paddingDefault} my-3`}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
+          viewport={{ once: true }}
         >
           <TestimonialSlider />
-        </div>
+        </motion.div>
         {/* FEATURES SECTION */}
-        <div
+        <motion.div
           className={`flex justify-between items-center gap-[80px] my-40 ${paddingDefault}`}
+          variants={contentVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <div className="flex flex-1 flex-col gap-4">
             <div className="relative inline-block">
@@ -440,7 +555,11 @@ export default function Home() {
                 ullamcorper non viverra a, neque orci.
               </p>
             </div>
-            <button className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90">
+            <motion.button
+              className="flex items-center gap-5 p-3 rounded-lg cursor-pointer h-16 px-2 py-4 text-blue-600 font-medium text-lg hover:opacity-90"
+              variants={buttonVariants}
+              whileHover="hover"
+            >
               View all the features
               <Image
                 src="/arrow-right.svg"
@@ -448,7 +567,7 @@ export default function Home() {
                 width={14}
                 height={14}
               />
-            </button>
+            </motion.button>
           </div>
           <div className="flex flex-1 flex-col relative -right-16">
             <div className="relative inline-block mt-0">
@@ -489,19 +608,24 @@ export default function Home() {
               />
             </div>
             <div className="relative inline-block mt-0 z-4">
-              <Card
-                badge="Popular"
-                title="Design for how people think"
-                description="Aliquam ut euismod condimentum elementum ultricies volutpat sit non."
-                badgeColor="blue"
-                position="-top-50 -left-20"
-              />
+              <motion.div variants={cardVariants}>
+                <Card
+                  badge="Popular"
+                  title="Design for how people think"
+                  description="Aliquam ut euismod condimentum elementum ultricies volutpat sit non."
+                  badgeColor="blue"
+                  position="-top-50 -left-20"
+                />
+              </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* SIGN UP SECTION */}
-        <div
-          className={`flex items-center justify-center gap-20 h-[779px] max-w-full relative ${paddingDefault}bg-yellow-400 px-20 py-64`}
+        <motion.div
+          className={`flex items-center justify-center gap-20 h-[779px] max-w-full bg-yellow-400 relative ${paddingDefault} px-20 py-64`}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
+          viewport={{ once: true, amount: "all" }}
         >
           <Image
             src="/left-card-round.svg"
@@ -520,9 +644,13 @@ export default function Home() {
                 Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
                 Risus elit et fringilla habitant ut facilisi.
               </p>
-              <button className="border-2 border-orange-600 rounded-lg cursor-pointer w-60 h-12 px-6 bg-orange-600 text-white font-bold text-2xl hover:opacity-90">
+              <motion.button
+                className="border-2 border-orange-600 rounded-lg cursor-pointer w-60 h-12 px-6 bg-orange-600 text-white font-bold text-2xl hover:opacity-90"
+                variants={buttonVariants}
+                whileHover="hover"
+              >
                 Sign Up Now
-              </button>
+              </motion.button>
             </div>
           </div>
           <Image
@@ -532,9 +660,14 @@ export default function Home() {
             height={430}
             className="absolute top-24 right-0"
           />
-        </div>
+        </motion.div>
         {/* FORM SECTION */}
-        <div className="flex items-center justify-center h-[779px] max-w-full relative bg-[#EA580C] p-20 gap-20 text-white">
+        <motion.div
+          className="flex items-center justify-center h-[779px] max-w-full relative bg-[#EA580C] p-20 gap-20 text-white"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
+          viewport={{ once: true }}
+        >
           <div className="flex flex-col items-center justify-center gap-8 w-7xl">
             <h2 className="font-extrabold text-[56px] leading-[110%] -tracking-normal relative">
               Ready for your next project?
@@ -559,18 +692,25 @@ export default function Home() {
                 className="w-full h-20 rounded-xl bg-white placeholder:text-[#A6A6A6] p-4 placeholder:text-sm placeholder:font-normal"
               />
               <div className="w-full flex items-center justify-center mt-3">
-                <button className="text-center mx-0 border-2 border-[#0F172A] rounded-lg cursor-pointer w-60 h-12 px-6 bg-[#0F172A] text-white font-bold text-2xl hover:opacity-90">
+                <motion.button
+                  className="text-center mx-0 border-2 border-[#0F172A] rounded-lg cursor-pointer w-60 h-12 px-6 bg-[#0F172A] text-white font-bold text-2xl hover:opacity-90"
+                  variants={buttonVariants}
+                  whileHover="hover"
+                >
                   Request Demo
-                </button>
+                </motion.button>
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </main>
       {/* FOOTER SECTION */}
       {/* <footer className="flex flex-col bg-gray-900"> */}
-      <footer
+      <motion.footer
         className={`flex flex-col items-center justify-center gap-20 max-w-full relative ${paddingDefault} bg-gray-900 pt-12`}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="flex items-start justify-between w-full gap-10 text-white">
           <Image
@@ -678,7 +818,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 }
