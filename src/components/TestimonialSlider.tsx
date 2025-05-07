@@ -66,7 +66,7 @@ export default function TestimonialSlider() {
         <h2 className="font-extrabold text-[56px] leading-[110%] tracking-tighter relative inline-block">
           What everyone says
         </h2>
-        <div className="flex items-center justify-center gap-6">
+        <div className="hidden md:flex items-center justify-center gap-6">
           <button onClick={() => scroll("left")} className="cursor-pointer">
             <LeftButtonArrow />
           </button>
