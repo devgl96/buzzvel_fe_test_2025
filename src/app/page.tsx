@@ -639,7 +639,15 @@ export default function Home() {
             alt="left card round vector"
             width={430}
             height={430}
-            className="absolute md:top-24 md:left-0 md:w-[430px] w-fit top-0 left-0"
+            className="hidden md:block absolute top-24 left-0 w-[430px]"
+          />
+
+          <Image
+            src="/up-card-round.svg"
+            alt="up card round vector"
+            width={430}
+            height={430}
+            className="md:hidden block w-full absolute top-0 left-0 mb-10"
           />
 
           <div className="flex flex-col items-center justify-center gap-8 w-7xl">
@@ -647,7 +655,7 @@ export default function Home() {
               Join a world of learning
             </h2>
             <div className="flex flex-col items-center justify-center gap-8">
-              <p className="md:text-xl text-[16px] font-normal leading-[180%] md:leading-[140%] -tracking-tighter h-20 text-gray-900 text-center md:w-2xl w-sm">
+              <p className="md:text-xl text-[16px] font-normal leading-[180%] md:leading-[140%] -tracking-tighter h-20 text-gray-900 text-center md:w-2xl w-[320px]">
                 Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
                 Risus elit et fringilla habitant ut facilisi.
               </p>
@@ -666,7 +674,15 @@ export default function Home() {
             alt="right card round vector"
             width={430}
             height={430}
-            className="absolute md:top-24 md:right-0 md:w-[430px] w-[200px] bottom-0 right-0"
+            className="hidden md:block absolute top-24 right-0 w-[430px]"
+          />
+
+          <Image
+            src="/down-card-round.svg"
+            alt="down card round vector"
+            width={430}
+            height={430}
+            className="md:hidden block w-full absolute bottom-0 right-0 mb-10"
           />
         </motion.div>
         {/* FORM SECTION */}
