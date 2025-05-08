@@ -726,7 +726,7 @@ export default function Home() {
             width={160}
             height={40}
           />
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 md:my-0 my-10">
             <p className="font-medium text-sm leading-[110%]">Product</p>
             <a href="#" className="font-normal text-sm leading-[140%]">
               Pricing
@@ -741,7 +741,7 @@ export default function Home() {
               Accessibility
             </a>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 md:my-0 my-10">
             <p className="font-medium text-sm leading-[110%]">Solutions</p>
             <a href="#" className="font-normal text-sm leading-[140%]">
               Brainstorming
@@ -756,7 +756,7 @@ export default function Home() {
               Research
             </a>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 md:my-0 my-10">
             <p className="font-medium text-sm leading-[110%]">Resources</p>
             <a href="#" className="font-normal text-sm leading-[140%]">
               Help Center
@@ -771,7 +771,7 @@ export default function Home() {
               FAQs
             </a>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 md:my-0 my-10">
             <p className="font-medium text-sm leading-[110%]">Support</p>
             <a href="#" className="font-normal text-sm leading-[140%]">
               Contact Us
@@ -786,7 +786,7 @@ export default function Home() {
               Integrations
             </a>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 md:my-0 my-10">
             <p className="font-medium text-sm leading-[110%]">Company</p>
             <a href="#" className="font-normal text-sm leading-[140%]">
               About
