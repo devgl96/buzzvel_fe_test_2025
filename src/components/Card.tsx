@@ -11,9 +11,6 @@ interface CardProps {
 export default function Card(props: CardProps) {
   const { title, badge, description, badgeColor, position } = props;
 
-  const textColor = `text-${badgeColor}-800`;
-  const backgroundColor = `bg-${badgeColor}-100`;
-
   const getBadgeColor = () => {
     switch (badgeColor) {
       case "red":
@@ -33,7 +30,7 @@ export default function Card(props: CardProps) {
 
   return (
     <div
-      className={`w-52 h-56 bg-white rounded-lg absolute ${position} p-4 flex flex-col items-start justify-center gap-2 shadow-xl`}
+      className={`md:w-52 md:h-56 w-40 h-56 bg-white rounded-lg absolute ${position} p-4 flex flex-col items-start justify-center gap-2 shadow-xl`}
     >
       <span
         className={twMerge(
@@ -43,10 +40,10 @@ export default function Card(props: CardProps) {
       >
         {badge}
       </span>
-      <h3 className="font-medium text-xl leading-[110%] -tracking-tighter">
+      <h3 className="font-medium md:text-xl text-[16px] leading-[110%] -tracking-tighter">
         {title}
       </h3>
-      <p className="font-normal text-sm leading-[140%] -tracking-tighter text-gray-600">
+      <p className="font-normal md:text-sm text-xs leading-[140%] -tracking-tighter text-gray-600">
         {description}
       </p>
       <button className="flex items-center justify-center px-2 py-3 my-1 rounded-lg cursor-pointer h-10 w-full border-2 border-blue-600 text-blue-600 font-medium text-sm hover:opacity-90">

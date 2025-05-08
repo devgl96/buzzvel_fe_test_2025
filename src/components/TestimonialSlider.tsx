@@ -61,9 +61,9 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <section>
+    <section className="w-full px-4 md:px-0 ml-auto">
       <div className="flex items-center justify-between w-full mb-20">
-        <h2 className="font-extrabold text-[56px] leading-[110%] tracking-tighter relative inline-block">
+        <h2 className="font-extrabold md:text-[56px] text-2xl leading-[110%] tracking-tighter relative inline-block">
           What everyone says
         </h2>
         <div className="hidden md:flex items-center justify-center gap-6">
@@ -79,7 +79,7 @@ export default function TestimonialSlider() {
       <div className="relative -mx-6 px-6 overflow-hidden">
         <div
           ref={sliderRef}
-          className="flex gap-4 overflow-x-hidden scroll-smooth snap-x snap-mandatory pb-4"
+          className="flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth snap-x snap-mandatory pb-4"
         >
           {testimonials.map((testimonial, i) => (
             <CardComment

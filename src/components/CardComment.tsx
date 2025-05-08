@@ -15,7 +15,7 @@ export default function CardComment(props: CardCommentProps) {
   return (
     <div
       key={key}
-      className="min-w-[80%] max-w-sm h-80 sm:min-w-[40%] md:min-w-[33%] lg:min-w-[30%] xl:min-w-[25%] snap-start shrink-0 bg-white rounded-3xl p-6 shadow-lg border border-gray-100 relative"
+      className="min-w-[250px] max-w-sm h-80 sm:min-w-[40%] md:min-w-[33%] lg:min-w-[30%] xl:min-w-[25%] snap-start shrink-0 bg-white rounded-3xl p-6 shadow-lg border border-gray-100 relative"
     >
       <p className="font-normal text-lg leading-[160%] -tracking-normal text-gray-900">
         {comment}
