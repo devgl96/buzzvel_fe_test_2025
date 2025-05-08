@@ -670,20 +670,20 @@ export default function Home() {
           />
         </motion.div>
         {/* FORM SECTION */}
-        {/* <motion.div
+        <motion.div
           className="flex items-center justify-center h-[779px] max-w-full relative bg-[#EA580C] p-20 gap-20 text-white"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-col items-center justify-center gap-8 w-7xl">
-            <h2 className="font-extrabold text-[56px] leading-[110%] -tracking-normal relative">
+          <div className="flex flex-col items-center justify-center gap-8 md:w-7xl w-[361px]">
+            <h2 className="font-extrabold md:text-[56px] text-[32px] leading-[110%] -tracking-normal relative text-center">
               Ready for your next project?
             </h2>
-            <p className="text-[32px] font-extralight leading-[160%] -tracking-tighter h-20">
+            <p className="md:text-[32px] text-lg font-extralight leading-[160%] -tracking-tighter h-20 text-center">
               Sit elit feugiat turpis sed integer integer accumsan turpis.
             </p>
-            <form className="flex flex-col gap-5 w-[550px]">
+            <form className="flex flex-col gap-5 md:w-[550px] w-[361px]">
               <label className="font-medium text-lg leading-[100%]">
                 Email
               </label>
@@ -710,7 +710,7 @@ export default function Home() {
               </div>
             </form>
           </div>
-        </motion.div> */}
+        </motion.div>
       </main>
       {/* FOOTER SECTION */}
       <motion.footer
