@@ -15,7 +15,7 @@ export const LeftButtonArrow = () => {
           height="46"
           rx="23"
           stroke="#EA580C"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M33.5 26.5H21H33.5ZM21 26.5L27 20.5L21 26.5ZM21 26.5L27 32.5L21 26.5Z"
@@ -24,9 +24,9 @@ export const LeftButtonArrow = () => {
         <path
           d="M21 26.5L27 32.5M33.5 26.5H21H33.5ZM21 26.5L27 20.5L21 26.5Z"
           stroke="#EA580C"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
@@ -37,9 +37,9 @@ export const LeftButtonArrow = () => {
           width="54"
           height="54"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"

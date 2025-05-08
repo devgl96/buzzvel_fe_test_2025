@@ -15,10 +15,9 @@ export const RightArrow = ({ className }: RightArrowProps) => {
       className={twMerge("cursor-pointer hover:fill-[#0F172C]", className)}
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M0.65901 0.90901C1.53769 0.0303301 2.96231 0.0303301 3.84099 0.90901L17.341 14.409C18.2197 15.2877 18.2197 16.7123 17.341 17.591L3.84099 31.091C2.96231 31.9697 1.53769 31.9697 0.65901 31.091C-0.21967 30.2123 -0.21967 28.7877 0.65901 27.909L12.568 16L0.65901 4.09099C-0.21967 3.21231 -0.21967 1.78769 0.65901 0.90901Z"
-        // fill="#0F172A"
       />
     </svg>
   );

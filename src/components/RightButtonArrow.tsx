@@ -15,7 +15,7 @@ export const RightButtonArrow = () => {
           height="46"
           rx="23"
           stroke="#EA580C"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M21 26.5H33.5H21ZM33.5 26.5L27.5 20.5L33.5 26.5ZM33.5 26.5L27.5 32.5L33.5 26.5Z"
@@ -24,9 +24,9 @@ export const RightButtonArrow = () => {
         <path
           d="M33.5 26.5L27.5 32.5M21 26.5H33.5H21ZM33.5 26.5L27.5 20.5L33.5 26.5Z"
           stroke="#EA580C"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
@@ -37,9 +37,9 @@ export const RightButtonArrow = () => {
           width="54"
           height="54"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolation-Filters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
